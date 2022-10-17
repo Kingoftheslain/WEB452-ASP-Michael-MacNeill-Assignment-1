@@ -20,8 +20,17 @@ namespace ClocksApp.Controllers
         }
 
         // GET: Clocks
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
+            var clocks = from c in _context.Clocks
+                         select c;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                clocks = clocks.Where(s => s.Name.Contains(searchString));
+            }
+
+
             return View(await _context.Clocks.ToListAsync());
         }
 

@@ -8748,11 +8748,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Michael\\Desktop\\School Assignments\\Fall_2022\\WEB452\\ClocksApp\\ClocksApp.csproj",
+      "projectUniqueName": "C:\\Users\\Michael\\Source\\Repos\\WEB452-ASP-Michael-MacNeill-Assignment-1\\ClocksApp\\ClocksApp.csproj",
       "projectName": "ClocksApp",
-      "projectPath": "C:\\Users\\Michael\\Desktop\\School Assignments\\Fall_2022\\WEB452\\ClocksApp\\ClocksApp.csproj",
+      "projectPath": "C:\\Users\\Michael\\Source\\Repos\\WEB452-ASP-Michael-MacNeill-Assignment-1\\ClocksApp\\ClocksApp.csproj",
       "packagesPath": "C:\\Users\\Michael\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Michael\\Desktop\\School Assignments\\Fall_2022\\WEB452\\ClocksApp\\obj\\",
+      "outputPath": "C:\\Users\\Michael\\Source\\Repos\\WEB452-ASP-Michael-MacNeill-Assignment-1\\ClocksApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Michael\\AppData\\Roaming\\NuGet\\NuGet.Config",
