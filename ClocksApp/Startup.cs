@@ -30,7 +30,9 @@ namespace ClocksApp
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("ClocksAppContext")));
+                    Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<ClocksAppContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("ClocksAppContext")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();

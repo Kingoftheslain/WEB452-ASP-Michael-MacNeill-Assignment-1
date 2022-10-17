@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using ClocksApp.Data;
 
 namespace ClocksApp.Models
 {
@@ -11,11 +12,11 @@ namespace ClocksApp.Models
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
-            using (var context = new Data.ClocksAppContext(
+            using (var context = new ClocksAppContext(
                 serviceProvider.GetRequiredService<
-                    DbContextOptions<Data.ClocksAppContext>>())) 
+                    DbContextOptions<ClocksAppContext>>())) 
             { 
-                if (context.Clocks.Any())
+                if (context.Clocks != null && context.Clocks.Any())
                 {
                     return; //DB Has already Been Seeded
                 }
@@ -101,6 +102,7 @@ namespace ClocksApp.Models
                         Price = 1249.99M
                     } 
                     );
+                context.SaveChanges();
             }
         }
     }

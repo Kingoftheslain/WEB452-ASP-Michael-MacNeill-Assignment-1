@@ -28,3 +28,7 @@ Oct. 16th
 21:01 I have begun to add the Data to the SeedData.cs file
 
 21:40 I have finished adding all of the Data to the SeedData.cs file
+
+Oct. 17
+
+Got the Database working, will be adding a Rating and Size setting to the database

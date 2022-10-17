@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+AnGcjEgAj4vfnWHqEBBnGlQYIm9Ig2rYjPYupRCUKnQQBIygdqZJU0Msnn4wL7/hbbCs/7UVdD740/kyZ+0/A==",
+  "dgSpecHash": "FX2V/Eo6DSL39OWpkZjbIxCRqnmW1+c/X3A1GqCeI03HcGpv48hPheoLoF7Q5IqtX8f/jslL4f65a2nD8VhKww==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Michael\\Source\\Repos\\WEB452-ASP-Michael-MacNeill-Assignment-1\\ClocksApp\\ClocksApp.csproj",
+  "projectFilePath": "C:\\Users\\Michael\\Desktop\\College Programs & Assignments\\Fall 2022\\Develop Web Apps in ASP\\ClocksApp\\ClocksApp\\ClocksApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.29\\microsoft.aspnetcore.cryptography.internal.3.1.29.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.29\\microsoft.aspnetcore.cryptography.keyderivation.3.1.29.nupkg.sha512",

@@ -12,9 +12,9 @@ namespace ClocksApp.Controllers
 {
     public class ClocksController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ClocksAppContext _context;
 
-        public ClocksController(ApplicationDbContext context)
+        public ClocksController(ClocksAppContext context)
         {
             _context = context;
         }
