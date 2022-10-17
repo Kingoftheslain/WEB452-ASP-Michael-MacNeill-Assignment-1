@@ -17,7 +17,7 @@ A network-related or instance-specific error occurred while establishing a conne
 
 1:01 Realized I was typing in the Registered Database as ClockContext instead of ClocksContext
 
-Oct. 16th 17:07
+Oct. 16th
 
 17:07 After attempting to figure out the issue with my Previous app for roughtly 90 mins, I decided to scrap the previous project and restart in order to keep better track of the Context objects i lost track of last time
 
