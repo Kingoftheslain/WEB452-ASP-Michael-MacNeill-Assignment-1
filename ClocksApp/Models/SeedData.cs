@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using ClocksApp.Data;
 
 namespace ClocksApp.Models
 {
@@ -11,9 +12,9 @@ namespace ClocksApp.Models
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
-            using (var context = new Data.ClocksAppContext(
+            using (var context = new ClocksAppContext(
                 serviceProvider.GetRequiredService<
-                    DbContextOptions<Data.ClocksAppContext>>())) 
+                    DbContextOptions<ClocksAppContext>>())) 
             { 
                 if (context.Clocks.Any())
                 {
@@ -23,18 +24,22 @@ namespace ClocksApp.Models
                 context.Clocks.AddRange(
                     new Clocks
                     {
-                        Name = "5in Silver Analog Watch",
+                        Name = "Silver Analog Watch",
                         ReleaseDate = DateTime.Parse("1994-3-17"),
                         Type = "Pocket Watch",
-                        Price = 149.99M
+                        Price = 149.99M,
+                        Rating = 3,
+                        Size = "5in"
                     },
 
                     new Clocks
                     {
-                        Name = "8in Gold Analog Watch",
+                        Name = "Gold Analog Watch",
                         ReleaseDate = DateTime.Parse("1991-7-04"),
                         Type = "Pocket Watch",
-                        Price = 179.99M
+                        Price = 179.99M,
+                        Rating = 4,
+                        Size = "8in"
                     },
 
                     new Clocks
@@ -42,7 +47,9 @@ namespace ClocksApp.Models
                         Name = "Apple Watch Ultra",
                         ReleaseDate = DateTime.Parse("2022-09-23"),
                         Type = "Wrist Watch",
-                        Price = 1099.99M
+                        Price = 1099.99M,
+                        Rating = 3,
+                        Size = "22mm"
                     },
 
                     new Clocks
@@ -50,7 +57,9 @@ namespace ClocksApp.Models
                         Name = "Apple Watch",
                         ReleaseDate = DateTime.Parse("2015-4-10"),
                         Type = "Wrist Watch",
-                        Price = 89.99M
+                        Price = 89.99M,
+                        Rating = 3,
+                        Size = "20mm"
                     },
 
                     new Clocks
@@ -58,7 +67,9 @@ namespace ClocksApp.Models
                         Name = "Apple Watch Series 7",
                         ReleaseDate = DateTime.Parse("2021-10-15"),
                         Type = "Wrist Watch",
-                        Price = 599.99M
+                        Price = 599.99M,
+                        Rating = 3,
+                        Size = "20mm"
                     },
 
                     new Clocks
@@ -66,7 +77,9 @@ namespace ClocksApp.Models
                         Name = "Galaxy Watch 5",
                         ReleaseDate = DateTime.Parse("2022-8-10"),
                         Type = "Wrist Watch",
-                        Price = 299.99M
+                        Price = 299.99M,
+                        Rating = 4,
+                        Size = "22mm"
                     },
 
                     new Clocks
@@ -74,7 +87,9 @@ namespace ClocksApp.Models
                         Name = "Galaxy Watch 5 Pro",
                         ReleaseDate = DateTime.Parse("2022-8-26"),
                         Type = "Wrist Watch",
-                        Price = 479.99M
+                        Price = 479.99M,
+                        Rating = 4,
+                        Size = "22mm"
                     },
 
                     new Clocks
@@ -87,10 +102,12 @@ namespace ClocksApp.Models
 
                     new Clocks
                     {
-                        Name = "Vintage Gold 8in Watch",
+                        Name = "Vintage Gold Watch",
                         ReleaseDate = DateTime.Parse("1994-3-17"),
                         Type = "Pocket Watch",
-                        Price = 1499.99M
+                        Price = 1499.99M,
+                        Rating = 5,
+                        Size = "8in"
                     },
 
                     new Clocks
@@ -98,7 +115,9 @@ namespace ClocksApp.Models
                         Name = "Vintage Silver 8in Watch",
                         ReleaseDate = DateTime.Parse("1994-3-17"),
                         Type = "Pocket Watch",
-                        Price = 1249.99M
+                        Price = 1249.99M,
+                        Rating = 3,
+                        Size = "5in"
                     } 
                     );
             }

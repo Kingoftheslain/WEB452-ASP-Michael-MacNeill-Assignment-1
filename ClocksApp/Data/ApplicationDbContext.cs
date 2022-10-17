@@ -13,6 +13,6 @@ namespace ClocksApp.Data
             : base(options)
         {
         }
-        public DbSet<ClocksApp.Models.Clocks> Clocks { get; set; }
+        public DbSet<Clocks> Clocks { get; set; }
     }
 }

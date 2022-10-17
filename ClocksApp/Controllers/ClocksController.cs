@@ -20,9 +20,34 @@ namespace ClocksApp.Controllers
         }
 
         // GET: Clocks
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string clockType, string searchString)
         {
-            return View(await _context.Clocks.ToListAsync());
+            // Use LINQ to get list of Types
+            IQueryable<string> TypeQuery = from c in _context.Clocks
+                                           orderby c.Type
+                                           select c.Type;
+
+            var clocks = from c in _context.Clocks
+                         select c;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                clocks = clocks.Where(s => s.Name.Contains(searchString));
+            }
+
+            if (!string.IsNullOrEmpty(clockType))
+            {
+                clocks = clocks.Where(x => x.Type == clockType);
+            }
+
+            var clockTypeVM = new clockCatViewModel
+            {
+                Type = new SelectList(await TypeQuery.Distinct().ToListAsync()),
+                clocks = await clocks.ToListAsync()
+            };
+
+
+            return View(clockTypeVM);
         }
 
         // GET: Clocks/Details/5

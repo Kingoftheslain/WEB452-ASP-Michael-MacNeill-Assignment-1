@@ -14,6 +14,6 @@ namespace ClocksApp.Data
     { 
     }
     
-        public DbSet<ClocksApp.Models.Clocks> Clocks { get; set; }
+        public DbSet<Clocks> Clocks { get; set; }
     }
 }
