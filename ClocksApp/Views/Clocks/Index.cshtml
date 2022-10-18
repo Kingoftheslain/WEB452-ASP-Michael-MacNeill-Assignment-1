@@ -3,8 +3,36 @@
 @{
     ViewData["Title"] = "Index";
 }
+<style>
+    html {
+        background-color: aquamarine;
+        font-family: Arial;
+        display: inline-block;
+    }
 
-<h1>Index</h1>
+    body {
+        width: 75%;
+        text-align: center;
+        display: inline-block;
+        margin-left: 12.5%;
+    }
+
+    .footer {
+        margin-left: -12.5%;
+    }
+
+    th{
+        border: 2px solid black;
+        padding: 1px
+    }
+
+    td{
+        border: 2px dashed black;
+        background-color: rgb(150,150,150);
+    }
+</style>
+
+<h1>List of Products</h1>
 
 <p>
     <a asp-action="Create">Create New</a>

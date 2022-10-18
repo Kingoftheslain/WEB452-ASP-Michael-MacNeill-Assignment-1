@@ -1,6 +1,56 @@
-﻿@{      ViewData["Title"] = "Product List";
+﻿@{ ViewData["Title"] = "Product List";
 }
+<style>
+    html {
+        background-color: aquamarine;
+        font-family: Arial;
+        display: inline-block;
+    }
 
-<h2>List of Watches</h2>
+    body {
+        width: 75%;
+        text-align: center;
+        display: inline-block;
+        margin-left: 12.5%;
+    }
 
-<p>Hello from our View Template!</p>
+    .footer {
+        margin-left: -12.5%;
+        
+    }
+
+    img{
+        width: 100%;
+    }
+    div {
+        width: 25%;
+        display: inline-block;
+        margin-left: 5%;
+    }
+
+    div#Tuck{
+        margin-left: 10%;
+    }
+</style>
+
+<h3>Who Is on our Staff?</h3>
+
+<div>
+    <img src="~/img/Me.jpg" alt="Michael MacNeill" style="width: 240px; height: 240px; " />
+    <p>Michael MacNeill : CEO</p>
+</div>
+<div>
+    <img src="~/img/peter-parker.jpg" alt="Peter Parker" style="width: 320px; height: 320px;" />
+    <p>Peter Parker : Stock Manager</p>
+</div>
+<div id="Tuck">
+    <img src="~/img/Tuck.jpg" alt="Tucker" style="width: 240px; height: 320px;" />
+    <p>Tucker : Workplace Dog</p>
+</div>
+
+<h3>Where to Find us?</h3>
+
+<p>We can be found At 61-01 Fresh Pond Rd</p>
+
+<img src="~/img/Store Front.png" alt="The New Building" />
+<caption>We are currently In the Process of Moving to this Location to open our first store, We Will be open for business Early 2023!</caption>
